@@ -22,7 +22,7 @@ Level 1
 Question:
 Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
 between 2000 and 3200 (both included).
-The numbers obtained should be printed in a comma-separated sequence on a single line.
+The numbers obtained should be print (ed in a comma-separated sequence on a single line.
 
 Hints: 
 Consider use range(#begin, #end) method
@@ -34,7 +34,7 @@ for i in range(2000, 3201):
     if (i%7==0) and (i%5!=0):
         l.append(str(i))
 
-print (','.join(l)) 
+print (','.join(l) 
 ```
 
 
@@ -72,7 +72,7 @@ Question 3
 Level 1
 
 Question:
-With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
+With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print (the dictionary.
 Suppose the following input is supplied to the program:
 8
 Then, the output should be:
@@ -83,12 +83,12 @@ In case of input data being supplied to the question, it should be assumed to be
 Consider use dict()
 
 Solution:
-n=int(raw_input())
+n=int(input())
 d=dict()
 for i in range(1,n+1):
     d[i]=i*i
 
-print d
+print (d
 #----------------------------------------#
 
 #----------------------------------------#
@@ -108,11 +108,11 @@ In case of input data being supplied to the question, it should be assumed to be
 tuple() method can convert list to tuple
 
 Solution:
-values=raw_input()
+values=input()
 l=values.split(",")
 t=tuple(l)
-print l
-print t
+print (l
+print (t
 #----------------------------------------#
 
 #----------------------------------------#
@@ -122,7 +122,7 @@ Level 1
 Question:
 Define a class which has at least two methods:
 getString: to get a string from console input
-printString: to print the string in upper case.
+printString: to print (the string in upper case.
 Also please include simple test function to test the class methods.
 
 Hints:
@@ -134,10 +134,10 @@ class InputOutString(object):
         self.s = ""
 
     def getString(self):
-        self.s = raw_input()
+        self.s = input()
 
     def printString(self):
-        print self.s.upper()
+        print (self.s.upper()
 
 strObj = InputOutString()
 strObj.getString()
@@ -170,11 +170,11 @@ import math
 c=50
 h=30
 value = []
-items=[x for x in raw_input().split(',')]
+items=[x for x in input().split(',')]
 for d in items:
     value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
 
-print ','.join(value)
+print (','.join(value)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -194,7 +194,7 @@ Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
 Solution:
-input_str = raw_input()
+input_str = input()
 dimensions=[int(x) for x in input_str.split(',')]
 rowNum=dimensions[0]
 colNum=dimensions[1]
@@ -204,7 +204,7 @@ for row in range(rowNum):
     for col in range(colNum):
         multilist[row][col]= row*col
 
-print multilist
+print (multilist
 #----------------------------------------#
 
 #----------------------------------------#
@@ -222,9 +222,9 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
-items=[x for x in raw_input().split(',')]
+items=[x for x in input().split(',')]
 items.sort()
-print ','.join(items)
+print (','.join(items)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -246,14 +246,14 @@ In case of input data being supplied to the question, it should be assumed to be
 Solution:
 lines = []
 while True:
-    s = raw_input()
+    s = input()
     if s:
         lines.append(s.upper())
     else:
         break;
 
 for sentence in lines:
-    print sentence
+    print (sentence
 #----------------------------------------#
 
 #----------------------------------------#
@@ -272,11 +272,10 @@ In case of input data being supplied to the question, it should be assumed to be
 We use set container to remove duplicated data automatically and then use sorted() to sort the data.
 
 Solution:
-s = raw_input()
+s = input()
 words = [word for word in s.split(" ")]
-print " ".join(sorted(list(set(words))))
+print (" ".join(sorted(list(set(words))))
 #----------------------------------------#
-
 #----------------------------------------#
 Question 11
 Level 2
@@ -294,13 +293,13 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 value = []
-items=[x for x in raw_input().split(',')]
+items=[x for x in input().split(',')]
 for p in items:
     intp = int(p, 2)
     if not intp%5:
         value.append(p)
 
-print ','.join(value)
+print (','.join(value)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -320,7 +319,7 @@ for i in range(1000, 3001):
     s = str(i)
     if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
         values.append(s)
-print ",".join(values)
+print (",".join(values)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -339,7 +338,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
-s = raw_input()
+s = input()
 d={"DIGITS":0, "LETTERS":0}
 for c in s:
     if c.isdigit():
@@ -348,8 +347,8 @@ for c in s:
         d["LETTERS"]+=1
     else:
         pass
-print "LETTERS", d["LETTERS"]
-print "DIGITS", d["DIGITS"]
+print ("LETTERS", d["LETTERS"]
+print ("DIGITS", d["DIGITS"]
 #----------------------------------------#
 
 #----------------------------------------#
@@ -368,7 +367,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
-s = raw_input()
+s = input()
 d={"UPPER CASE":0, "LOWER CASE":0}
 for c in s:
     if c.isupper():
@@ -377,8 +376,8 @@ for c in s:
         d["LOWER CASE"]+=1
     else:
         pass
-print "UPPER CASE", d["UPPER CASE"]
-print "LOWER CASE", d["LOWER CASE"]
+print ("UPPER CASE", d["UPPER CASE"]
+print ("LOWER CASE", d["LOWER CASE"]
 #----------------------------------------#
 
 #----------------------------------------#
@@ -396,12 +395,12 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
-a = raw_input()
+a = input()
 n1 = int( "%s" % a )
 n2 = int( "%s%s" % (a,a) )
 n3 = int( "%s%s%s" % (a,a,a) )
 n4 = int( "%s%s%s%s" % (a,a,a,a) )
-print n1+n2+n3+n4
+print (n1+n2+n3+n4
 #----------------------------------------#
 
 #----------------------------------------#
@@ -419,9 +418,9 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
-values = raw_input()
+values = input()
 numbers = [x for x in values.split(",") if int(x)%2!=0]
-print ",".join(numbers)
+print (",".join(numbers)
 #----------------------------------------#
 
 Question 17
@@ -447,7 +446,7 @@ In case of input data being supplied to the question, it should be assumed to be
 Solution:
 netAmount = 0
 while True:
-    s = raw_input()
+    s = input()
     if not s:
         break
     values = s.split(" ")
@@ -459,7 +458,7 @@ while True:
         netAmount-=amount
     else:
         pass
-print netAmount
+print (netAmount
 #----------------------------------------#
 
 #----------------------------------------#
@@ -488,7 +487,7 @@ In case of input data being supplied to the question, it should be assumed to be
 Solutions:
 import re
 value = []
-items=[x for x in raw_input().split(',')]
+items=[x for x in input().split(',')]
 for p in items:
     if len(p)<6 or len(p)>12:
         continue
@@ -507,7 +506,7 @@ for p in items:
     else:
         pass
     value.append(p)
-print ",".join(value)
+print (",".join(value)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -538,12 +537,12 @@ from operator import itemgetter, attrgetter
 
 l = []
 while True:
-    s = raw_input()
+    s = input()
     if not s:
         break
     l.append(tuple(s.split(",")))
 
-print sorted(l, key=itemgetter(0,1,2))
+print (sorted(l, key=itemgetter(0,1,2))
 #----------------------------------------#
 
 #----------------------------------------#
@@ -566,7 +565,7 @@ def putNumbers(n):
             yield j
 
 for i in reverse(100):
-    print i
+    print (i
 #----------------------------------------#
 
 #----------------------------------------#
@@ -580,7 +579,7 @@ DOWN 3
 LEFT 3
 RIGHT 2
 ¡­
-The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence of movement and original point. If the distance is a float, then just print the nearest integer.
+The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence of movement and original point. If the distance is a float, then just print (the nearest integer.
 Example:
 If the following tuples are given as input to the program:
 UP 5
@@ -597,7 +596,7 @@ Solution:
 import math
 pos = [0,0]
 while True:
-    s = raw_input()
+    s = input()
     if not s:
         break
     movement = s.split(" ")
@@ -614,7 +613,7 @@ while True:
     else:
         pass
 
-print int(round(math.sqrt(pos[1]**2+pos[0]**2)))
+print (int(round(math.sqrt(pos[1]**2+pos[0]**2)))
 #----------------------------------------#
 
 #----------------------------------------#
@@ -643,7 +642,7 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 freq = {}   # frequency of words in text
-line = raw_input()
+line = input()
 for word in line.split():
     freq[word] = freq.get(word,0)+1
 
@@ -651,7 +650,7 @@ words = freq.keys()
 words.sort()
 
 for w in words:
-    print "%s:%d" % (w,freq[w])
+    print ("%s:%d" % (w,freq[w])
 #----------------------------------------#
 
 #----------------------------------------#
@@ -668,8 +667,8 @@ Solution:
 def square(num):
     return num ** 2
 
-print square(2)
-print square(3)
+print (square(2)
+print (square(3)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -678,16 +677,16 @@ Level 1
 
 Question:
     Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. But Python has a built-in document function for every built-in functions.
-    Please write a program to print some Python built-in functions documents, such as abs(), int(), raw_input()
+    Please write a program to print (some Python built-in functions documents, such as abs(), int(), input()
     And add document for your own function
     
 Hints:
     The built-in document method is __doc__
 
 Solution:
-print abs.__doc__
-print int.__doc__
-print raw_input.__doc__
+print (abs.__doc__
+print (int.__doc__
+print (input.__doc__
 
 def square(num):
     '''Return the square value of the input number.
@@ -696,8 +695,8 @@ def square(num):
     '''
     return num ** 2
 
-print square(2)
-print square.__doc__
+print (square(2)
+print (square.__doc__
 #----------------------------------------#
 
 #----------------------------------------#
@@ -721,11 +720,11 @@ class Person:
         self.name = name
 
 jeffrey = Person("Jeffrey")
-print "%s name is %s" % (Person.name, jeffrey.name)
+print ("%s name is %s" % (Person.name, jeffrey.name)
 
 nico = Person()
 nico.name = "Nico"
-print "%s name is %s" % (Person.name, nico.name)
+print ("%s name is %s" % (Person.name, nico.name)
 #----------------------------------------#
 
 #----------------------------------------#
@@ -739,11 +738,11 @@ Solution
 def SumFunction(number1, number2):
 	return number1+number2
 
-print SumFunction(1,2)
+print (SumFunction(1,2)
 
 #----------------------------------------#
 Question:
-Define a function that can convert a integer into a string and print it in console.
+Define a function that can convert a integer into a string and print (it in console.
 
 Hints:
 
@@ -751,14 +750,14 @@ Use str() to convert a number to string.
 
 Solution
 def printValue(n):
-	print str(n)
+	print (str(n)
 
 printValue(3)
 	
 
 #----------------------------------------#
 Question:
-Define a function that can convert a integer into a string and print it in console.
+Define a function that can convert a integer into a string and print (it in console.
 
 Hints:
 
@@ -766,7 +765,7 @@ Use str() to convert a number to string.
 
 Solution
 def printValue(n):
-	print str(n)
+	print (str(n)
 
 printValue(3)
 
@@ -774,7 +773,7 @@ printValue(3)
 2.10
 
 Question:
-Define a function that can receive two integral numbers in string form and compute their sum and then print it in console.
+Define a function that can receive two integral numbers in string form and compute their sum and then print (it in console.
 
 Hints:
 
@@ -782,7 +781,7 @@ Use int() to convert a string to integer.
 
 Solution
 def printValue(s1,s2):
-	print int(s1)+int(s2)
+	print (int(s1)+int(s2)
 
 printValue("3","4") #7
 
@@ -792,7 +791,7 @@ printValue("3","4") #7
 
 
 Question:
-Define a function that can accept two strings as input and concatenate them and then print it in console.
+Define a function that can accept two strings as input and concatenate them and then print (it in console.
 
 Hints:
 
@@ -800,7 +799,7 @@ Use + to concatenate the strings
 
 Solution
 def printValue(s1,s2):
-	print s1+s2
+	print (s1+s2
 
 printValue("3","4") #34
 
@@ -809,7 +808,7 @@ printValue("3","4") #34
 
 
 Question:
-Define a function that can accept two strings as input and print the string with maximum length in console. If two strings have the same length, then the function should print al l strings line by line.
+Define a function that can accept two strings as input and print (the string with maximum length in console. If two strings have the same length, then the function should print (al l strings line by line.
 
 Hints:
 
@@ -820,12 +819,12 @@ def printValue(s1,s2):
 	len1 = len(s1)
 	len2 = len(s2)
 	if len1>len2:
-		print s1
+		print (s1
 	elif len2>len1:
-		print s2
+		print (s2
 	else:
-		print s1
-		print s2
+		print (s1
+		print (s2
 		
 
 printValue("one","three")
@@ -836,7 +835,7 @@ printValue("one","three")
 2.10
 
 Question:
-Define a function that can accept an integer number as input and print the "It is an even number" if the number is even, otherwise print "It is an odd number".
+Define a function that can accept an integer number as input and print (the "It is an even number" if the number is even, otherwise print ("It is an odd number".
 
 Hints:
 
@@ -845,9 +844,9 @@ Use % operator to check if a number is even or odd.
 Solution
 def checkValue(n):
 	if n%2 == 0:
-		print "It is an even number"
+		print ("It is an even number"
 	else:
-		print "It is an odd number"
+		print ("It is an odd number"
 		
 
 checkValue(7)
@@ -857,7 +856,7 @@ checkValue(7)
 2.10
 
 Question:
-Define a function which can print a dictionary where the keys are numbers between 1 and 3 (both included) and the values are square of keys.
+Define a function which can print (a dictionary where the keys are numbers between 1 and 3 (both included) and the values are square of keys.
 
 Hints:
 
@@ -870,7 +869,7 @@ def printDict():
 	d[1]=1
 	d[2]=2**2
 	d[3]=3**2
-	print d
+	print (d
 		
 
 printDict()
@@ -883,7 +882,7 @@ printDict()
 2.10
 
 Question:
-Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys.
+Define a function which can print (a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys.
 
 Hints:
 
@@ -896,7 +895,7 @@ def printDict():
 	d=dict()
 	for i in range(1,21):
 		d[i]=i**2
-	print d
+	print (d
 		
 
 printDict()
@@ -906,7 +905,7 @@ printDict()
 2.10
 
 Question:
-Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the values only.
+Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print (the values only.
 
 Hints:
 
@@ -921,7 +920,7 @@ def printDict():
 	for i in range(1,21):
 		d[i]=i**2
 	for (k,v) in d.items():	
-		print v
+		print (v
 		
 
 printDict()
@@ -930,7 +929,7 @@ printDict()
 2.10
 
 Question:
-Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the keys only.
+Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print (the keys only.
 
 Hints:
 
@@ -945,7 +944,7 @@ def printDict():
 	for i in range(1,21):
 		d[i]=i**2
 	for k in d.keys():	
-		print k
+		print (k
 		
 
 printDict()
@@ -955,7 +954,7 @@ printDict()
 2.10
 
 Question:
-Define a function which can generate and print a list where the values are square of numbers between 1 and 20 (both included).
+Define a function which can generate and print (a list where the values are square of numbers between 1 and 20 (both included).
 
 Hints:
 
@@ -968,7 +967,7 @@ def printList():
 	li=list()
 	for i in range(1,21):
 		li.append(i**2)
-	print li
+	print (li
 		
 
 printList()
@@ -977,31 +976,7 @@ printList()
 2.10
 
 Question:
-Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the first 5 elements in the list.
-
-Hints:
-
-Use ** operator to get power of a number.
-Use range() for loops.
-Use list.append() to add values into a list.
-Use [n1:n2] to slice a list
-
-Solution
-def printList():
-	li=list()
-	for i in range(1,21):
-		li.append(i**2)
-	print li[:5]
-		
-
-printList()
-
-
-#----------------------------------------#
-2.10
-
-Question:
-Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the last 5 elements in the list.
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print (the first 5 elements in the list.
 
 Hints:
 
@@ -1015,7 +990,7 @@ def printList():
 	li=list()
 	for i in range(1,21):
 		li.append(i**2)
-	print li[-5:]
+	print (li[:5]
 		
 
 printList()
@@ -1025,7 +1000,7 @@ printList()
 2.10
 
 Question:
-Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print all values except the first 5 elements in the list.
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print (the last 5 elements in the list.
 
 Hints:
 
@@ -1039,7 +1014,7 @@ def printList():
 	li=list()
 	for i in range(1,21):
 		li.append(i**2)
-	print li[5:]
+	print (li[-5:]
 		
 
 printList()
@@ -1049,7 +1024,31 @@ printList()
 2.10
 
 Question:
-Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included). 
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print (all values except the first 5 elements in the list.
+
+Hints:
+
+Use ** operator to get power of a number.
+Use range() for loops.
+Use list.append() to add values into a list.
+Use [n1:n2] to slice a list
+
+Solution
+def printList():
+	li=list()
+	for i in range(1,21):
+		li.append(i**2)
+	print (li[5:]
+		
+
+printList()
+
+
+#----------------------------------------#
+2.10
+
+Question:
+Define a function which can generate and print (a tuple where the value are square of numbers between 1 and 20 (both included). 
 
 Hints:
 
@@ -1063,7 +1062,7 @@ def printTuple():
 	li=list()
 	for i in range(1,21):
 		li.append(i**2)
-	print tuple(li)
+	print (tuple(li)
 		
 printTuple()
 
@@ -1073,7 +1072,7 @@ printTuple()
 2.10
 
 Question:
-With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line. 
+With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print (the first half values in one line and the last half values in one line. 
 
 Hints:
 
@@ -1083,15 +1082,15 @@ Solution
 tp=(1,2,3,4,5,6,7,8,9,10)
 tp1=tp[:5]
 tp2=tp[5:]
-print tp1
-print tp2
+print (tp1
+print (tp2
 
 
 #----------------------------------------#
 2.10
 
 Question:
-Write a program to generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10). 
+Write a program to generate and print (another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10). 
 
 Hints:
 
@@ -1106,7 +1105,7 @@ for i in tp:
 		li.append(tp[i])
 
 tp2=tuple(li)
-print tp2
+print (tp2
 
 
 
@@ -1114,18 +1113,18 @@ print tp2
 2.14
 
 Question:
-Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes", otherwise print "No". 
+Write a program which accepts a string as input to print ("Yes" if the string is "yes" or "YES" or "Yes", otherwise print ("No". 
 
 Hints:
 
 Use if statement to judge condition.
 
 Solution
-s= raw_input()
+s= input()
 if s=="yes" or s=="YES" or s=="Yes":
-    print "Yes"
+    print ("Yes"
 else:
-    print "No"
+    print ("No"
 
 
 
@@ -1143,7 +1142,7 @@ Use lambda to define anonymous functions.
 Solution
 li = [1,2,3,4,5,6,7,8,9,10]
 evenNumbers = filter(lambda x: x%2==0, li)
-print evenNumbers
+print (evenNumbers
 
 
 #----------------------------------------#
@@ -1160,7 +1159,7 @@ Use lambda to define anonymous functions.
 Solution
 li = [1,2,3,4,5,6,7,8,9,10]
 squaredNumbers = map(lambda x: x**2, li)
-print squaredNumbers
+print (squaredNumbers
 
 #----------------------------------------#
 3.5
@@ -1177,7 +1176,7 @@ Use lambda to define anonymous functions.
 Solution
 li = [1,2,3,4,5,6,7,8,9,10]
 evenNumbers = map(lambda x: x**2, filter(lambda x: x%2==0, li))
-print evenNumbers
+print (evenNumbers
 
 
 
@@ -1195,7 +1194,7 @@ Use lambda to define anonymous functions.
 
 Solution
 evenNumbers = filter(lambda x: x%2==0, range(1,21))
-print evenNumbers
+print (evenNumbers
 
 
 #----------------------------------------#
@@ -1211,7 +1210,7 @@ Use lambda to define anonymous functions.
 
 Solution
 squaredNumbers = map(lambda x: x**2, range(1,21))
-print squaredNumbers
+print (squaredNumbers
 
 
 
@@ -1230,7 +1229,7 @@ Solution
 class American(object):
     @staticmethod
     def printNationality():
-        print "America"
+        print ("America"
 
 anAmerican = American()
 anAmerican.printNationality()
@@ -1260,8 +1259,8 @@ class NewYorker(American):
 
 anAmerican = American()
 aNewYorker = NewYorker()
-print anAmerican
-print aNewYorker
+print (anAmerican
+print (aNewYorker
 
 
 
@@ -1288,7 +1287,7 @@ class Circle(object):
         return self.radius**2*3.14
 
 aCircle = Circle(2)
-print aCircle.area()
+print (aCircle.area()
 
 
 
@@ -1316,7 +1315,7 @@ class Rectangle(object):
         return self.length*self.width
 
 aRectangle = Rectangle(2,10)
-print aRectangle.area()
+print (aRectangle.area()
 
 
 
@@ -1325,7 +1324,7 @@ print aRectangle.area()
 
 7.2
 
-Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have a area function which can print (the area of the shape where Shape's area is 0 by default.
 
 Hints:
 
@@ -1349,7 +1348,7 @@ class Square(Shape):
         return self.length*self.length
 
 aSquare= Square(3)
-print aSquare.area()
+print (aSquare.area()
 
 
 
@@ -1388,11 +1387,11 @@ def throws():
 try:
     throws()
 except ZeroDivisionError:
-    print "division by zero!"
+    print ("division by zero!"
 except Exception, err:
-    print 'Caught an exception'
+    print ('Caught an exception'
 finally:
-    print 'In finally block for cleanup'
+    print ('In finally block for cleanup'
 
 
 #----------------------------------------#
@@ -1419,7 +1418,7 @@ error = MyError("something wrong")
 #----------------------------------------#
 Question:
 
-Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print (the user name of a given email address. Both user names and company names are composed of letters only.
 
 Example:
 If the following email address is given as input to the program:
@@ -1438,16 +1437,16 @@ Use \w to match letters.
 
 Solution:
 import re
-emailAddress = raw_input()
+emailAddress = input()
 pat2 = "(\w+)@((\w+\.)+(com))"
 r2 = re.match(pat2,emailAddress)
-print r2.group(1)
+print (r2.group(1)
 
 
 #----------------------------------------#
 Question:
 
-Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print (the company name of a given email address. Both user names and company names are composed of letters only.
 
 Example:
 If the following email address is given as input to the program:
@@ -1466,10 +1465,10 @@ Use \w to match letters.
 
 Solution:
 import re
-emailAddress = raw_input()
+emailAddress = input()
 pat2 = "(\w+)@(\w+)\.(com)"
 r2 = re.match(pat2,emailAddress)
-print r2.group(2)
+print (r2.group(2)
 
 
 
@@ -1477,7 +1476,7 @@ print r2.group(2)
 #----------------------------------------#
 Question:
 
-Write a program which accepts a sequence of words separated by whitespace as input to print the words composed of digits only.
+Write a program which accepts a sequence of words separated by whitespace as input to print (the words composed of digits only.
 
 Example:
 If the following words is given as input to the program:
@@ -1496,15 +1495,15 @@ Use re.findall() to find all substring using regex.
 
 Solution:
 import re
-s = raw_input()
-print re.findall("\d+",s)
+s = input()
+print (re.findall("\d+",s)
 
 
 #----------------------------------------#
 Question:
 
 
-Print a unicode string "hello world".
+Print (a unicode string "hello world".
 
 Hints:
 
@@ -1513,7 +1512,7 @@ Use u'strings' format to define unicode string.
 Solution:
 
 unicodeString = u"hello world!"
-print unicodeString
+print (unicodeString
 
 #----------------------------------------#
 Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
@@ -1524,9 +1523,9 @@ Use unicode() function to convert.
 
 Solution:
 
-s = raw_input()
+s = input()
 u = unicode( s ,"utf-8")
-print u
+print (u
 
 #----------------------------------------#
 Question:
@@ -1560,11 +1559,11 @@ Use float() to convert an integer to a float
 
 Solution:
 
-n=int(raw_input())
+n=int(input())
 sum=0.0
 for i in range(1,n+1):
     sum += float(float(i)/(i+1))
-print sum
+print (sum
 
 
 #----------------------------------------#
@@ -1599,8 +1598,8 @@ def f(n):
     else:
         return f(n-1)+100
 
-n=int(raw_input())
-print f(n)
+n=int(input())
+print (f(n)
 
 #----------------------------------------#
 
@@ -1638,8 +1637,8 @@ def f(n):
     elif n == 1: return 1
     else: return f(n-1)+f(n-2)
 
-n=int(raw_input())
-print f(n)
+n=int(input())
+print (f(n)
 
 
 #----------------------------------------#
@@ -1655,7 +1654,7 @@ f(n)=0 if n=0
 f(n)=1 if n=1
 f(n)=f(n-1)+f(n-2) if n>1
 
-Please write a program using list comprehension to print the Fibonacci Sequence in comma separated form with a given n input by console.
+Please write a program using list comprehension to print (the Fibonacci Sequence in comma separated form with a given n input by console.
 
 Example:
 If the following n is given as input to the program:
@@ -1681,16 +1680,16 @@ def f(n):
     elif n == 1: return 1
     else: return f(n-1)+f(n-2)
 
-n=int(raw_input())
+n=int(input())
 values = [str(f(x)) for x in range(0, n+1)]
-print ",".join(values)
+print (",".join(values)
 
 
 #----------------------------------------#
 
 Question:
 
-Please write a program using generator to print the even numbers between 0 and n in comma separated form while n is input by console.
+Please write a program using generator to print (the even numbers between 0 and n in comma separated form while n is input by console.
 
 Example:
 If the following n is given as input to the program:
@@ -1716,19 +1715,19 @@ def EvenGenerator(n):
         i+=1
 
 
-n=int(raw_input())
+n=int(input())
 values = []
 for i in EvenGenerator(n):
     values.append(str(i))
 
-print ",".join(values)
+print (",".join(values)
 
 
 #----------------------------------------#
 
 Question:
 
-Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
+Please write a program using generator to print (the numbers which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
 
 Example:
 If the following n is given as input to the program:
@@ -1751,12 +1750,12 @@ def NumGenerator(n):
         if i%5==0 and i%7==0:
             yield i
 
-n=int(raw_input())
+n=int(input())
 values = []
 for i in NumGenerator(n):
     values.append(str(i))
 
-print ",".join(values)
+print (",".join(values)
 
 
 #----------------------------------------#
@@ -1782,7 +1781,7 @@ for i in li:
 #----------------------------------------#
 Question:
 
-Please write a program which accepts basic mathematic expression from console and print the evaluation result.
+Please write a program which accepts basic mathematic expression from console and print (the evaluation result.
 
 Example:
 If the following string is given as input to the program:
@@ -1799,8 +1798,8 @@ Use eval() to evaluate an expression.
 
 Solution:
 
-expression = raw_input()
-print eval(expression)
+expression = input()
+print (eval(expression)
 
 
 #----------------------------------------#
@@ -1832,8 +1831,8 @@ def bin_search(li, element):
     return index
 
 li=[2,5,7,9,11,17,222]
-print bin_search(li,11)
-print bin_search(li,12)
+print (bin_search(li,11)
+print (bin_search(li,12)
 
 
 
@@ -1867,8 +1866,8 @@ def bin_search(li, element):
     return index
 
 li=[2,5,7,9,11,17,222]
-print bin_search(li,11)
-print bin_search(li,12)
+print (bin_search(li,11)
+print (bin_search(li,12)
 
 
 
@@ -1887,7 +1886,7 @@ Use random.random() to generate a random float in [0,1].
 Solution:
 
 import random
-print random.random()*100
+print (random.random()*100
 
 #----------------------------------------#
 Question:
@@ -1903,7 +1902,7 @@ Use random.random() to generate a random float in [0,1].
 Solution:
 
 import random
-print random.random()*100-5
+print (random.random()*100-5
 
 
 #----------------------------------------#
@@ -1920,7 +1919,7 @@ Use random.choice() to a random element from a list.
 Solution:
 
 import random
-print random.choice([i for i in range(11) if i%2==0])
+print (random.choice([i for i in range(11) if i%2==0])
 
 
 #----------------------------------------#
@@ -1937,7 +1936,7 @@ Use random.choice() to a random element from a list.
 Solution:
 
 import random
-print random.choice([i for i in range(201) if i%5==0 and i%7==0])
+print (random.choice([i for i in range(201) if i%5==0 and i%7==0])
 
 
 
@@ -1956,7 +1955,7 @@ Use random.sample() to generate a list of random values.
 Solution:
 
 import random
-print random.sample(range(100), 5)
+print (random.sample(range(100), 5)
 
 #----------------------------------------#
 Question:
@@ -1972,7 +1971,7 @@ Use random.sample() to generate a list of random values.
 Solution:
 
 import random
-print random.sample([i for i in range(100,201) if i%2==0], 5)
+print (random.sample([i for i in range(100,201) if i%2==0], 5)
 
 
 #----------------------------------------#
@@ -1989,13 +1988,13 @@ Use random.sample() to generate a list of random values.
 Solution:
 
 import random
-print random.sample([i for i in range(1,1001) if i%5==0 and i%7==0], 5)
+print (random.sample([i for i in range(1,1001) if i%5==0 and i%7==0], 5)
 
 #----------------------------------------#
 
 Question:
 
-Please write a program to randomly print a integer number between 7 and 15 inclusive.
+Please write a program to randomly print (a integer number between 7 and 15 inclusive.
 
 
 
@@ -2006,7 +2005,7 @@ Use random.randrange() to a random integer in a given range.
 Solution:
 
 import random
-print random.randrange(7,16)
+print (random.randrange(7,16)
 
 #----------------------------------------#
 
@@ -2025,13 +2024,13 @@ Solution:
 import zlib
 s = 'hello world!hello world!hello world!hello world!'
 t = zlib.compress(s)
-print t
-print zlib.decompress(t)
+print (t
+print (zlib.decompress(t)
 
 #----------------------------------------#
 Question:
 
-Please write a program to print the running time of execution of "1+1" for 100 times.
+Please write a program to print (the running time of execution of "1+1" for 100 times.
 
 
 
@@ -2042,12 +2041,12 @@ Solution:
 
 from timeit import Timer
 t = Timer("for i in range(100):1+1")
-print t.timeit()
+print (t.timeit()
 
 #----------------------------------------#
 Question:
 
-Please write a program to shuffle and print the list [3,6,7,8].
+Please write a program to shuffle and print (the list [3,6,7,8].
 
 
 
@@ -2059,12 +2058,12 @@ Solution:
 from random import shuffle
 li = [3,6,7,8]
 shuffle(li)
-print li
+print (li
 
 #----------------------------------------#
 Question:
 
-Please write a program to shuffle and print the list [3,6,7,8].
+Please write a program to shuffle and print (the list [3,6,7,8].
 
 
 
@@ -2076,7 +2075,7 @@ Solution:
 from random import shuffle
 li = [3,6,7,8]
 shuffle(li)
-print li
+print (li
 
 
 
@@ -2097,11 +2096,11 @@ for i in range(len(subjects)):
     for j in range(len(verbs)):
         for k in range(len(objects)):
             sentence = "%s %s %s." % (subjects[i], verbs[j], objects[k])
-            print sentence
+            print (sentence
 
 
 #----------------------------------------#
-Please write a program to print the list after removing delete even numbers in [5,6,77,45,22,12,24].
+Please write a program to print (the list after removing delete even numbers in [5,6,77,45,22,12,24].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2110,12 +2109,12 @@ Solution:
 
 li = [5,6,77,45,22,12,24]
 li = [x for x in li if x%2!=0]
-print li
+print (li
 
 #----------------------------------------#
 Question:
 
-By using list comprehension, please write a program to print the list after removing delete numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
+By using list comprehension, please write a program to print (the list after removing delete numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2124,13 +2123,13 @@ Solution:
 
 li = [12,24,35,70,88,120,155]
 li = [x for x in li if x%5!=0 and x%7!=0]
-print li
+print (li
 
 
 #----------------------------------------#
 Question:
 
-By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].
+By using list comprehension, please write a program to print (the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2140,7 +2139,7 @@ Solution:
 
 li = [12,24,35,70,88,120,155]
 li = [x for (i,x) in enumerate(li) if i%2!=0]
-print li
+print (li
 
 #----------------------------------------#
 
@@ -2154,12 +2153,12 @@ Use list comprehension to make an array.
 Solution:
 
 array = [[ [0 for col in range(8)] for col in range(5)] for row in range(3)]
-print array
+print (array
 
 #----------------------------------------#
 Question:
 
-By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
+By using list comprehension, please write a program to print (the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2169,7 +2168,7 @@ Solution:
 
 li = [12,24,35,70,88,120,155]
 li = [x for (i,x) in enumerate(li) if i not in (0,4,5)]
-print li
+print (li
 
 
 
@@ -2177,7 +2176,7 @@ print li
 
 Question:
 
-By using list comprehension, please write a program to print the list after removing the value 24 in [12,24,35,24,88,120,155].
+By using list comprehension, please write a program to print (the list after removing the value 24 in [12,24,35,24,88,120,155].
 
 Hints:
 Use list's remove method to delete a value.
@@ -2186,7 +2185,7 @@ Solution:
 
 li = [12,24,35,24,88,120,155]
 li = [x for x in li if x!=24]
-print li
+print (li
 
 
 #----------------------------------------#
@@ -2203,11 +2202,11 @@ set1=set([1,3,6,78,35,55])
 set2=set([12,24,35,24,88,120,155])
 set1 &= set2
 li=list(set1)
-print li
+print (li
 
 #----------------------------------------#
 
-With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate values with original order reserved.
+With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print (this list after removing all duplicate values with original order reserved.
 
 Hints:
 Use set() to store a number of values without duplicate.
@@ -2225,13 +2224,13 @@ def removeDuplicate( li ):
     return newli
 
 li=[12,24,35,24,88,120,155,88,120,155]
-print removeDuplicate(li)
+print (removeDuplicate(li)
 
 
 #----------------------------------------#
 Question:
 
-Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print ("Male" for Male class and "Female" for Female class.
 
 Hints:
 Use Subclass(Parentclass) to define a child class.
@@ -2252,15 +2251,15 @@ class Female( Person ):
 
 aMale = Male()
 aFemale= Female()
-print aMale.getGender()
-print aFemale.getGender()
+print (aMale.getGender()
+print (aFemale.getGender()
 
 
 
 #----------------------------------------#
 Question:
 
-Please write a program which count and print the numbers of each character in a string input by console.
+Please write a program which count and print (the numbers of each character in a string input by console.
 
 Example:
 If the following string is given as input to the program:
@@ -2284,16 +2283,16 @@ Use dict.get() method to lookup a key with default value.
 Solution:
 
 dic = {}
-s=raw_input()
+s=input()
 for s in s:
     dic[s] = dic.get(s,0)+1
-print '\n'.join(['%s,%s' % (k, v) for k, v in dic.items()])
+print ('\n'.join(['%s,%s' % (k, v) for k, v in dic.items()])
 
 #----------------------------------------#
 
 Question:
 
-Please write a program which accepts a string from console and print it in reverse order.
+Please write a program which accepts a string from console and print (it in reverse order.
 
 Example:
 If the following string is given as input to the program:
@@ -2309,15 +2308,15 @@ Use list[::-1] to iterate a list in a reverse order.
 
 Solution:
 
-s=raw_input()
+s=input()
 s = s[::-1]
-print s
+print (s
 
 #----------------------------------------#
 
 Question:
 
-Please write a program which accepts a string from console and print the characters that have even indexes.
+Please write a program which accepts a string from console and print (the characters that have even indexes.
 
 Example:
 If the following string is given as input to the program:
@@ -2333,9 +2332,9 @@ Use list[::2] to iterate a list by step 2.
 
 Solution:
 
-s=raw_input()
+s=input()
 s = s[::2]
-print s
+print (s
 #----------------------------------------#
 
 
@@ -2350,7 +2349,7 @@ Use itertools.permutations() to get permutations of list.
 Solution:
 
 import itertools
-print list(itertools.permutations([1,2,3]))
+print (list(itertools.permutations([1,2,3]))
 
 #----------------------------------------#
 Question:
@@ -2374,8 +2373,6 @@ def solve(numheads,numlegs):
 numheads=35
 numlegs=94
 solutions=solve(numheads,numlegs)
-print solutions
+print (solutions
 
 #----------------------------------------#
-
-
